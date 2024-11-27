@@ -36,7 +36,9 @@ body {
     min-height: 100vh;
 }
 
-#cow {
+#cow,
+#cow01,
+#cow02 {
     background-image: url(../images/cow.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +47,23 @@ body {
     height: 100px;
     position: relative;
     top: 500px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
+
+#cow01 {
+    left: 120px;
+    display: none;
+    opacity: 0;
+}
+
+#cow02 {
+    top: 450px;
+    right: 120px;
+    display: none;
+    opacity: 0;
+}
+
 
 #cow.abducted {
     animation: abduct 2s ease-in-out infinite alternate;
