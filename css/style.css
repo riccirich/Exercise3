@@ -1,0 +1,24 @@
+:root {
+    --lapis: #015E80ff;
+    --gold: #F9B130ff;
+    --black: #040305ff;
+    --white: #F5F6F6ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    text-align: center;
+    font-family: arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
