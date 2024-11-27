@@ -31,7 +31,7 @@ body {
     background-image: url(../images/ufo.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     margin: 0 auto;
     min-height: 100vh;
 }
@@ -46,9 +46,9 @@ body {
     margin: 0 auto;
     height: 100px;
     position: relative;
-    top: 500px;
+    top: 700px;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, filter 0.5s ease;
 }
 
 #cow01 {
@@ -58,19 +58,26 @@ body {
 }
 
 #cow02 {
-    top: 450px;
+    top: 600px;
     right: 120px;
     display: none;
     opacity: 0;
 }
 
-
-#cow.abducted {
+.abducted {
     animation: abduct 2s ease-in-out infinite alternate;
 }
 
-#cow.flipped {
+.flipped {
     animation: flip 2s ease-in-out infinite;
+}
+
+.painted {
+    filter: saturate(100%) sepia(38%) saturate(1761%) hue-rotate(332deg) brightness(94%) contrast(97%);
+}
+
+.party {
+    animation: party-colors 1s ease infinite;
 }
 
 @keyframes abduct {
@@ -79,7 +86,7 @@ body {
     }
 
     to {
-        transform: translateY(-70px);
+        transform: translateY(-200px);
     }
 }
 
@@ -90,5 +97,15 @@ body {
 
     to {
         transform: rotate(-360deg);
+    }
+}
+
+@keyframes party-colors {
+    from {
+        filter: sepia(38%) saturate(1761%) hue-rotate(10deg);
+    }
+
+    to {
+        filter: sepia(38%) saturate(1761%) hue-rotate(360deg);
     }
 }

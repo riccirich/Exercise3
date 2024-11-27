@@ -11,10 +11,15 @@ const cow01 = document.getElementById('cow01');
 const cow02 = document.getElementById('cow02');
 
 // abduct button
+let isAbducted = false;
 abductBtn.addEventListener('click', () => {
-    cow.classList.toggle('abducted');
+    isAbducted = !isAbducted;
 
-    if (cow.classList.contains('abducted')) {
+    cow.classList.toggle('abducted');
+    cow01.classList.toggle('abducted');
+    cow02.classList.toggle('abducted');
+
+    if (isAbducted) {
         abductBtn.textContent = 'Release Mootilda!!!';
     } else {
         abductBtn.textContent = 'Abduct?!';
@@ -56,15 +61,52 @@ cloneBtn.addEventListener('click', () => {
 });
 
 // flip button
+let isFlipped = false;
 flipBtn.addEventListener('click', () => {
-    cow.classList.toggle('flipped');
+    isFlipped = !isFlipped;
 
-    if (cow.classList.contains('flipped')) {
+    cow.classList.toggle('flipped');
+    cow01.classList.toggle('flipped');
+    cow02.classList.toggle('flipped');
+
+    if (isFlipped) {
         flipBtn.textContent = 'Stop Flipping!!!';
     } else {
         flipBtn.textContent = 'Do a Flip';
     }
 });
 
+// paint button
+let isPainted = false;
 
+paintBtn.addEventListener('click', () => {
+    isPainted = !isPainted;
+    
+    cow.classList.toggle('painted');
+    cow01.classList.toggle('painted');
+    cow02.classList.toggle('painted');
+
+    if (isPainted) {
+        paintBtn.textContent = 'Unpaint Mootilda!!!';
+    } else {
+        paintBtn.textContent = 'Paint';
+    }
+});
+
+// party button
+let isPartying = false;
+
+partyBtn.addEventListener('click', () => {
+    isPartying = !isPartying;
+    cow.classList.toggle('party');
+
+    cow01.classList.toggle('party');
+    cow02.classList.toggle('party');
+
+    if (isPartying) {
+        partyBtn.textContent = 'Stop Party';
+    } else {
+        partyBtn.textContent = 'Party';
+    }
+});
 console.log('Hello, World!');
