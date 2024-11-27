@@ -15,7 +15,7 @@ img {
 
 body {
     background-color: var(--lapis);
-    background-image: url('../images/background.png');
+    background-image: url(../images/background.png);
     background-repeat: no-repeat;
     background-position: bottom;
     color: var(--white);
@@ -27,16 +27,50 @@ body {
     flex-direction: column;
 }
 
-.interactive-box {
-    margin: 0;
-    text-align: center;
-    min-height: 100vh;
-    background-image: url('../images/ufo-white.jpg');
+.alien-box {
+    background-image: url(../images/ufo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 
-.footer {
-    background-color: var(--black);
+#cow {
+    background-image: url(../images/cow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    height: 100px;
+    position: relative;
+    top: 500px;
+}
+
+#cow.abducted {
+    animation: abduct 2s ease-in-out infinite alternate;
+}
+
+#cow.flipped {
+    animation: flip 2s ease-in-out infinite;
+}
+
+@keyframes abduct {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-70px);
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
